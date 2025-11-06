@@ -42,7 +42,7 @@ export const useMusicPlayer = () => {
 useEffect(() => {
 setupTrackPlayer();
 return () => {
-// cleanup not to leave player running in dev
+
 };
 }, []);
 
@@ -77,6 +77,12 @@ const seekTo = useCallback(async (seconds: number) => {
 await TrackPlayer.seekTo(seconds);
 }, []);
 
+  const resume = useCallback(async () => {
+    if (currentTrack) {
+      await TrackPlayer.play();
+    }
+  }, [currentTrack]);
+
 
   return {
     isPlaying: playbackState.state === State.Playing,
@@ -88,5 +94,6 @@ await TrackPlayer.seekTo(seconds);
     seekTo,
     loading,
     error,
+    resume
   };
 };

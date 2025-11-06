@@ -10,6 +10,7 @@ export const THEME = {
     text: {
       primary: '#FFFFFF',
       secondary: 'rgba(255,255,255,0.75)',
+      tertiary: 'rgba(255,255,255,0.5)'
     },
     border: 'rgba(255, 255, 255, 0.2)',
   },

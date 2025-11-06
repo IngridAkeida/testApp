@@ -1,16 +1,10 @@
 // ChallengeCard component - Individual challenge display
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { GlassCard, GlassButton } from '../ui/GlassCard';
+import { GlassCard } from '../ui/GlassCard';
+import { GlassButton } from '../ui/GlassButton';
 import { THEME } from '../../constants/theme';
-import type { MusicChallenge } from '../../types';
-
-interface ChallengeCardProps {
-  challenge: MusicChallenge;
-  onPlay: (challenge: MusicChallenge) => void;
-  isCurrentTrack?: boolean;
-  isPlaying?: boolean;
-}
+import type { ChallengeCardProps } from '../../types';
 
 export const ChallengeCard: React.FC<ChallengeCardProps> = ({
   challenge,

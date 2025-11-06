@@ -71,7 +71,7 @@ name: 'music-store',
 )
 );
 
-// // Selector functions for performance
-// export const selectCurrentTrack = (state: MusicStore) => state.currentTrack;
-// export const selectIsPlaying = (state: MusicStore) => state.isPlaying;
-// export const selectChallenges = (state: MusicStore) => state.challenges;
+// Selector functions for performance
+export const selectCurrentTrack = (state: MusicStore) => state.currentTrack;
+export const selectIsPlaying = (state: MusicStore) => state.isPlaying;
+export const selectChallenges = (state: MusicStore) => state.challenges;

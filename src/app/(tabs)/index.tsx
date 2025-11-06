@@ -17,7 +17,6 @@ export default function HomeScreen() {
   const handlePlayChallenge = async (challenge: MusicChallenge) => {
     try {
       await play(challenge);
-      // Navigate to player modal after starting playback
       router.push('/(modals)/player');
     } catch (error) {
       console.error('Failed to play challenge:', error);

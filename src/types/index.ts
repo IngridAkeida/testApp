@@ -1,5 +1,7 @@
 // TypeScript type definitions for MusicRewards app
 
+import { TextStyle, ViewStyle } from "react-native";
+
 export interface MusicChallenge {
 id: string;
 title: string;
@@ -51,4 +53,30 @@ export interface UseChallengesReturn {
   error: string | null;
   refreshChallenges: () => Promise<void>;
   completeChallenge: (challengeId: string) => Promise<void>;
+}
+
+export interface GlassButtonProps {
+  title: string;
+  onPress: () => void;
+  loading?: boolean;
+  disabled?: boolean;
+  style?: ViewStyle;
+  textStyle?: TextStyle;
+  variant?: 'primary' | 'secondary';
+}
+
+export interface PointsCounterProps {
+  points: number;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+export interface ChallengeCardProps {
+  challenge: MusicChallenge;
+  onPlay: (challenge: MusicChallenge) => void;
+  isCurrentTrack?: boolean;
+  isPlaying?: boolean;
+}
+
+export interface ChallengeListProps {
+  onPlay: (challenge: MusicChallenge) => void;
 }

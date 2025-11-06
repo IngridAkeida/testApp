@@ -18,7 +18,6 @@ export default function ProfileScreen() {
     <ScrollView style={styles.container}>
       <Text style={styles.header}>Your Progress</Text>
 
-      {/* Stats Overview */}
       <GlassCard style={styles.statsCard}>
         <View style={styles.statsGrid}>
           <View style={styles.statItem}>
@@ -36,7 +35,6 @@ export default function ProfileScreen() {
         </View>
       </GlassCard>
 
-      {/* Challenge Progress */}
       <GlassCard style={styles.progressCard}>
         <Text style={styles.sectionTitle}>Challenge Progress</Text>
         {challenges.map((challenge) => {
